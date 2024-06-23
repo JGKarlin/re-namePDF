@@ -3,12 +3,12 @@
 
 ## Overview
 
-This script renames PDF files based on their citation in Chicago bibliography style and adds the citation to the PDF metadata. It utilizes OpenAI's GPT-4o to generate the citation from the text extracted from the PDF files.
+This script renames PDF files based on their citation in Chicago bibliography style and adds the citation to the PDF metadata. It utilizes OpenAI's GPT-4o to generate the citation from the text extracted from the PDF files. If there is a disagreement between the citation based on the sample and the embedded metatdata or if there is any missing data from the citation, the script will confirm the complete and accurate citation with the Crossref API.
 
 ## Features
 
-- Extracts text from the first 3 pages of PDF files (but this variable can be changed since it affects the number of tokens processed)
-- Generates a citation in JSON format using OpenAI's GPT-4.
+- Extracts text from the first 5 pages of PDF files (but this variable can be changed since it affects the number of tokens processed)
+- Generates a citation in JSON format using OpenAI's GPT-4o.
 - Renames PDF files to their citation in Chicago bibliography style.
 - Adds bibliographic metadata to PDF files.
 - Supports user choice for renaming files, adding metadata, or both.
@@ -19,6 +19,7 @@ This script renames PDF files based on their citation in Chicago bibliography st
 - `openai` library
 - `PyMuPDF` (also known as `fitz`)
 - `dotenv` library
+- `habanero` library (for Crossref API acccess)
 
 ## Installation
 

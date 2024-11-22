@@ -1,4 +1,4 @@
-### re-namePDF.py
+### renamePDF.py
 # PDF Citation Renamer and Metadata Generator
 
 ## Overview
